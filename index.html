@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Esquema | Ely</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* ===== Estilos generales ===== */
+    body { background: rgb(255, 255, 255); }
+
+    /* Video de portada */
+    .portada {
+      width: 100%;
+      height: 550px;
+      position: relative;
+      overflow: hidden;
+    }
+    #vd {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .portada p {
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+      color: #c55aff;
+      font-family: cursive;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    /* ===== Tarjetas ===== */
+    .cards {
+      width: 100%;
+      max-width: 220px;
+      min-height: 380px; /* todas mismas alturas */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px;
+      border-radius: 12px;
+      background-color: #f1d6ffa6;
+      margin: 10px;
+      border: 2px solid #fff;
+      transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
+    }
+    .cards:hover {
+      box-shadow: 0 0 20px #c55aff;
+      border-color: #fff;
+    }
+
+    /* Imagen dentro de la tarjeta */
+    .image-card {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    /* Título de tarjeta */
+    .card-title-center { 
+      font-size: 18px; 
+      text-align: center; 
+      margin-top:12px; 
+      font-weight:700; 
+    }
+
+    /* Footer de acordeón */
+    .card-footer { 
+      background: transparent; 
+      border-top: none; 
+      width: 100%;
+    }
+
+    /* Ajuste de acordeón flush */
+    .accordion-button:focus { box-shadow: none; }
+
+    /* Párrafo portada */
+    p { color: #c55aff; font-family: cursive; font-size: 18px; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Portada con video ===== -->
+  <div class="portada">
+    <video src="./vMorado.mp4" id="vd" autoplay muted loop playsinline></video>
+    <p>Ely Guzmán González — Ética profesional</p>
+  </div>
+
+  <!-- ===== Contenedor de tarjetas ===== -->
+  <div class="container my-4">
+    <div class="row justify-content-center">
+
+      <!-- ===== Tarjeta 1: Honestidad ===== -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="cards">
+          <img src="./img/honestidad.png" class="image-card" alt="Honestidad">
+          <div class="card-title-center">HONESTIDAD</div>
+
+          <!-- Acordeón TSU/Futuro -->
+          <div class="card-footer pt-3">
+            <div class="accordion accordion-flush" id="accordion-honestidad">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#honestidad-tsu">
+                    TSU
+                  </button>
+                </h2>
+                <div id="honestidad-tsu" class="accordion-collapse collapse" data-bs-parent="#accordion-honestidad">
+                  <div class="accordion-body">
+                    Siendo honesta con mis proyectos y avances, reconociendo errores y aprendiendo de ellos.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#honestidad-futuro">
+                    Futuro
+                  </button>
+                </h2>
+                <div id="honestidad-futuro" class="accordion-collapse collapse" data-bs-parent="#accordion-honestidad">
+                  <div class="accordion-body">
+                    Trabajo honesto y limpio, transparencia y compromiso con mis proyectos.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Tarjeta 2: Integridad ===== -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="cards">
+          <img src="./img/integridad.png" class="image-card" alt="Integridad">
+          <div class="card-title-center">INTEGRIDAD</div>
+          <div class="card-footer pt-3">
+            <div class="accordion accordion-flush" id="accordion-integridad">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#integridad-tsu">
+                    TSU
+                  </button>
+                </h2>
+                <div id="integridad-tsu" class="accordion-collapse collapse" data-bs-parent="#accordion-integridad">
+                  <div class="accordion-body">
+                    Aplico la integridad respetando las normas de la institución y trabajando de manera independiente, utilizando fuentes de información que me ayuden en mi aprendizaje.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#integridad-futuro">
+                    Futuro
+                  </button>
+                </h2>
+                <div id="integridad-futuro" class="accordion-collapse collapse" data-bs-parent="#accordion-integridad">
+                  <div class="accordion-body">
+                    En mi futuro profesional, seré íntegra al crear software seguro y confiable, siempre actuando con ética y responsabilidad en cada proyecto que emprenda.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Tarjeta 3: Compromiso ===== -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="cards">
+          <img src="./img/compromiso.png" class="image-card" alt="Compromiso">
+          <div class="card-title-center">COMPROMISO</div>
+          <div class="card-footer pt-3">
+            <div class="accordion accordion-flush" id="accordion-compromiso">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#compromiso-tsu">
+                    TSU
+                  </button>
+                </h2>
+                <div id="compromiso-tsu" class="accordion-collapse collapse" data-bs-parent="#accordion-compromiso">
+                  <div class="accordion-body">
+                    Cumplo con mis responsabilidades académicas con esfuerzo y constancia. Aunque falle, sigo adelante porque me motiva el interés genuino por mi carrera.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#compromiso-futuro">
+                    Futuro
+                  </button>
+                </h2>
+                <div id="compromiso-futuro" class="accordion-collapse collapse" data-bs-parent="#accordion-compromiso">
+                  <div class="accordion-body">
+                    Me comprometeré con cada proyecto, buscando siempre cumplir con calidad y puntualidad.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Tarjeta 4: Lealtad ===== -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="cards">
+          <img src="./img/lealtad.png" class="image-card" alt="Lealtad">
+          <div class="card-title-center">LEALTAD</div>
+          <div class="card-footer pt-3">
+            <div class="accordion accordion-flush" id="accordion-lealtad">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lealtad-tsu">
+                    TSU
+                  </button>
+                </h2>
+                <div id="lealtad-tsu" class="accordion-collapse collapse" data-bs-parent="#accordion-lealtad">
+                  <div class="accordion-body">
+                    Practico la lealtad en mi carrera, defendiendo con convicción mi futura profesión y siendo fiel a mis ideas en cada proyecto.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lealtad-futuro">
+                    Futuro
+                  </button>
+                </h2>
+                <div id="lealtad-futuro" class="accordion-collapse collapse" data-bs-parent="#accordion-lealtad">
+                  <div class="accordion-body">
+                    Ser leal a mi profesión, a mi equipo de trabajo y a los objetivos de la empresa donde colabore.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Tarjeta 5: Ecuanimidad ===== -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="cards">
+          <img src="./img/ecuaminidad.png" class="image-card" alt="Ecuanimidad">
+          <div class="card-title-center">ECUANIMIDAD</div>
+          <div class="card-footer pt-3">
+            <div class="accordion accordion-flush" id="accordion-ecuanimidad">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ecu-tsu">
+                    TSU
+                  </button>
+                </h2>
+                <div id="ecu-tsu" class="accordion-collapse collapse" data-bs-parent="#accordion-ecuanimidad">
+                  <div class="accordion-body">
+                    Mantengo la calma y el equilibrio ante los retos académicos y las opiniones distintas.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ecu-futuro">
+                    Futuro
+                  </button>
+                </h2>
+                <div id="ecu-futuro" class="accordion-collapse collapse" data-bs-parent="#accordion-ecuanimidad">
+                  <div class="accordion-body">
+                    Cultivando el equilibrio entre mi vocación y una vida serena, donde el orden y la paz interior me acompañarán en cada paso.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Tarjeta 6: Dedicación ===== -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="cards">
+          <img src="./img/dedicacion.png" class="image-card" alt="Dedicación">
+          <div class="card-title-center">DEDICACIÓN</div>
+          <div class="card-footer pt-3">
+            <div class="accordion accordion-flush" id="accordion-dedicacion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ded-tsu">
+                    TSU
+                  </button>
+                </h2>
+                <div id="ded-tsu" class="accordion-collapse collapse" data-bs-parent="#accordion-dedicacion">
+                  <div class="accordion-body">
+                    Pongo mi mejor esfuerzo en aprender, practicar y mejorar mis habilidades cada día.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ded-futuro">
+                    Futuro
+                  </button>
+                </h2>
+                <div id="ded-futuro" class="accordion-collapse collapse" data-bs-parent="#accordion-dedicacion">
+                  <div class="accordion-body">
+                    Constancia en mi labor profesional, buscando siempre dar mi mejor versión.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Tarjeta 7: Respeto ===== -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="cards">
+          <img src="./img/respeto.png" class="image-card" alt="Respeto">
+          <div class="card-title-center">RESPETO</div>
+          <div class="card-footer pt-3">
+            <div class="accordion accordion-flush" id="accordion-respeto">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respeto-tsu">
+                    TSU
+                  </button>
+                </h2>
+                <div id="respeto-tsu" class="accordion-collapse collapse" data-bs-parent="#accordion-respeto">
+                  <div class="accordion-body">
+                    Lo pongo en práctica cuando escucho, valoro y trato con cortesía a mis compañeros y docentes.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respeto-futuro">
+                    Futuro
+                  </button>
+                </h2>
+                <div id="respeto-futuro" class="accordion-collapse collapse" data-bs-parent="#accordion-respeto">
+                  <div class="accordion-body">
+                    Respetaré a mis clientes, las ideas, el trabajo y los derechos de cada persona con la que colabore.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Tarjeta 8: Responsabilidad Ciudadana ===== -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="cards">
+          <img src="./img/responsabilidadCiudadana.png" class="image-card" alt="Responsabilidad Ciudadana">
+          <div class="card-title-center">RESPONSABILIDAD CIUDADANA</div>
+          <div class="card-footer pt-3">
+            <div class="accordion accordion-flush" id="accordion-ciudadana">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ciudadana-tsu">
+                    TSU
+                  </button>
+                </h2>
+                <div id="ciudadana-tsu" class="accordion-collapse collapse" data-bs-parent="#accordion-ciudadana">
+                  <div class="accordion-body">
+                    Cuando cumplo mis deberes académicos y contribuyo al bienestar de mi comunidad escolar.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ciudadana-futuro">
+                    Futuro
+                  </button>
+                </h2>
+                <div id="ciudadana-futuro" class="accordion-collapse collapse" data-bs-parent="#accordion-ciudadana">
+                  <div class="accordion-body">
+                    Participaré activamente en el desarrollo social y tecnológico con ética y compromiso.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Tarjeta 9: Excelencia ===== -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="cards">
+          <img src="./img/excelencia.png" class="image-card" alt="Excelencia">
+          <div class="card-title-center">EXCELENCIA</div>
+          <div class="card-footer pt-3">
+            <div class="accordion accordion-flush" id="accordion-excelencia">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#excelencia-tsu">
+                    TSU
+                  </button>
+                </h2>
+                <div id="excelencia-tsu" class="accordion-collapse collapse" data-bs-parent="#accordion-excelencia">
+                  <div class="accordion-body">
+                    Busco la excelencia entregando trabajos bien elaborados y con la mejor calidad posible.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#excelencia-futuro">
+                    Futuro
+                  </button>
+                </h2>
+                <div id="excelencia-futuro" class="accordion-collapse collapse" data-bs-parent="#accordion-excelencia">
+                  <div class="accordion-body">
+                    Aspiraré a seguir creciendo, mejorando y alcanzando resultados que reflejen mi esfuerzo y profesionalismo.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Tarjeta 10: Conducta Intachable ===== -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="cards">
+          <img src="./img/conductaIntachable.png" class="image-card" alt="Conducta Intachable">
+          <div class="card-title-center">CONDUCTA INTACHABLE</div>
+          <div class="card-footer pt-3">
+            <div class="accordion accordion-flush" id="accordion-conducta">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conducta-tsu">
+                    TSU
+                  </button>
+                </h2>
+                <div id="conducta-tsu" class="accordion-collapse collapse" data-bs-parent="#accordion-conducta">
+                  <div class="accordion-body">
+                    Cuando mantengo una actitud respetuosa, puntual y comprometida.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conducta-futuro">
+                    Futuro
+                  </button>
+                </h2>
+                <div id="conducta-futuro" class="accordion-collapse collapse" data-bs-parent="#accordion-conducta">
+                  <div class="accordion-body">
+                    Seré una profesionista íntegra, confiable y un ejemplo de ética en mi entorno laboral.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div> <!-- row -->
+  </div> <!-- container -->
+
+  <!-- ===== Bootstrap JS ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
